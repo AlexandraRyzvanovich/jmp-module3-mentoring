@@ -1,0 +1,28 @@
+server:
+  port: 9090
+spring:
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:default
+    username: sa
+    password: pass
+    driverClassName: org.h2.Driver
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+    repositories:
+      bootstrap-mode: default
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+
+custom:
+  datasource:
+    enabled: true
+
+debug: true
+
+openapi:
+  dev-url: http://localhost:8089
